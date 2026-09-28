@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Neuroli Taxi Service – Basel-Land</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF3E8;--ink:#2A0F4D;--card:#fff;--line:#2A0F4D;--hot:#FF5A3C;--sun:#FFB400;--wa:#25D366;--plum:#1B0B3B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150830;--ink:#FFF3E8;--card:#26104F;--line:#FF8A5C}}
+:root[data-theme="dark"]{--bg:#150830;--ink:#FFF3E8;--card:#26104F;--line:#FF8A5C}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Outfit',system-ui,-apple-system,'Segoe UI',Tahoma,Arial,sans-serif;line-height:1.55;padding-bottom:96px}
+.langs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:14px 12px}
+.langs button{font:inherit;font-weight:700;font-size:15px;padding:7px 14px;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--hot);color:#fff;border-color:var(--hot)}
+.hero{position:relative;overflow:hidden;margin:0 auto;max-width:760px;border-radius:0 0 36px 36px;background:linear-gradient(180deg,#2B0B5E 0%,#8E2A7A 45%,#FF6B3D 80%,#FFB400 100%);color:#fff;text-align:center;padding:44px 20px 0}
+.sun{position:absolute;left:50%;bottom:34px;width:230px;height:230px;margin-inline-start:-115px;border-radius:50%;background:radial-gradient(circle,#FFE27A,#FFB400 60%,rgba(255,180,0,0) 72%);opacity:.9}
+.hero h1{position:relative;margin:0;font-size:clamp(40px,12vw,76px);line-height:.98;font-weight:900;text-wrap:balance;text-shadow:0 4px 0 rgba(27,11,59,.5)}
+.hero p.loc{position:relative;margin:10px 0 0;font-size:20px;font-weight:700;letter-spacing:.08em}
+.road{position:relative;height:150px;margin-top:20px}
+.sky{position:absolute;inset-inline:0;bottom:22px;width:100%;height:80px}
+.taxi{position:absolute;bottom:0;left:50%;width:210px;margin-left:-105px;animation:drive 2.4s cubic-bezier(.2,.8,.2,1) both}
+.asphalt{position:absolute;inset-inline:0;bottom:0;height:24px;background:var(--plum)}
+@keyframes drive{from{transform:translateX(-130vw)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.taxi{animation:none}}
+.wrap{max-width:720px;margin:0 auto;padding:26px 20px}
+.lead{font-size:20px;font-weight:500;margin:0 0 24px;text-align:center}
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;font-weight:900;font-size:clamp(21px,6.5vw,30px);padding:18px 20px;border-radius:18px;margin-bottom:16px;box-shadow:0 8px 0 rgba(0,0,0,.28)}
+.btn:active{transform:translateY(5px);box-shadow:0 3px 0 rgba(0,0,0,.28)}
+.wa{background:var(--wa);color:#04280F}
+.call{background:var(--hot);color:#fff}
+.btn svg{width:1.3em;height:1.3em;fill:currentColor;flex:none}
+:focus-visible{outline:4px solid var(--sun);outline-offset:3px}
+h2{font-size:28px;margin:40px 0 14px;font-weight:900;text-align:center}
+.list{display:grid;gap:12px}
+.item{background:var(--card);border-inline-start:8px solid var(--hot);border-radius:14px;padding:14px 18px;box-shadow:0 2px 12px rgba(42,15,77,.15)}
+.item:nth-child(2){border-color:var(--sun)}.item:nth-child(3){border-color:#8E2A7A}
+.item b{display:block;font-size:20px}
+.price{margin-top:36px;padding:24px;border-radius:20px;background:linear-gradient(120deg,var(--hot),var(--sun));color:var(--plum);font-size:26px;font-weight:900;text-align:center;line-height:1.2}
+footer{text-align:center;font-size:14px;padding:8px 20px 28px}
+.fab{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:64px;height:64px;border-radius:50%;background:var(--wa);color:#04280F;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.fab svg{width:34px;height:34px;fill:currentColor}
+</style>
+</head>
+<body>
+<nav class="langs" id="langs" aria-label="Language"></nav>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <h1>Neuroli Taxi Service</h1>
+  <p class="loc">BASEL-LAND · 🇨🇭</p>
+  <div class="road" aria-hidden="true">
+    <svg class="sky" viewBox="0 0 400 80" preserveAspectRatio="none"><path fill="#1B0B3B" opacity=".75" d="M0 80V50h30V36h22v14h20V28l6-14 6 14v22h26V40h30V22h24v28h22V44h30V30l5-16 5 16v20h24V46h34V34h26v16h30V80z"/></svg>
+    <svg class="taxi" viewBox="0 0 210 84"><rect x="80" y="2" width="50" height="18" rx="4" fill="#FFB400" stroke="#1B0B3B" stroke-width="3"/><text x="105" y="16" font-size="12" font-weight="900" text-anchor="middle" fill="#1B0B3B" font-family="Arial">TAXI</text><path d="M14 58c0-10 6-14 18-16l26-22c4-3 8-4 14-4h50c8 0 12 2 16 7l18 19c14 2 22 6 22 16v8H14z" fill="#FFD400" stroke="#1B0B3B" stroke-width="3"/><path d="M62 42l20-16h20v16zM110 42V26h14c4 0 6 2 8 4l12 12z" fill="#BFE6FF" stroke="#1B0B3B" stroke-width="3"/><circle cx="52" cy="68" r="14" fill="#1B0B3B"/><circle cx="52" cy="68" r="6" fill="#ccc"/><circle cx="158" cy="68" r="14" fill="#1B0B3B"/><circle cx="158" cy="68" r="6" fill="#ccc"/><rect x="0" y="56" width="10" height="8" rx="3" fill="#fff"/></svg>
+    <div class="asphalt"></div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="lead" data-k="lead"></p>
+  <a class="btn wa" id="wa" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.3-.5.1-1.2.1-3.7-.8-3.1-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.3 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.4z"/></svg><span data-k="wa"></span></a>
+  <a class="btn call" href="tel:+41797002001" dir="ltr">&#9742; 079 700 20 01</a>
+  <h2 data-k="h2"></h2>
+  <div class="list">
+    <div class="item"><b data-k="i1t"></b><span data-k="i1d"></span></div>
+    <div class="item"><b data-k="i2t"></b><span data-k="i2d"></span></div>
+    <div class="item"><b data-k="i3t"></b><span data-k="i3d"></span></div>
+  </div>
+  <div class="price" data-k="price"></div>
+</main>
+<a class="fab" id="fab" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.3-.5.1-1.2.1-3.7-.8-3.1-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.2 1.3 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.4z"/></svg></a>
+<footer>Neuroli Taxi Service · Basel-Land · <a href="tel:+41797002001" style="color:inherit" dir="ltr">079 700 20 01</a></footer>
+<script>
+var L={
+de:{n:"Deutsch",lead:"Mit uns fahren Sie am günstigsten. Pünktlich und freundlich in ganz Basel-Land.",wa:"Jetzt per WhatsApp buchen",h2:"Wohin fahren wir?",i1t:"Stadtfahrten",i1d:"Von Tür zu Tür",i2t:"Flughafen & Bahnhof",i2d:"Pünktlich zu Flug und Zug",i3t:"Nachtfahrten",i3d:"Sicher nach Hause",price:"Fairer Preis. Kein Umweg.",msg:"Hallo, ich möchte ein Taxi bestellen."},
+it:{n:"Italiano",lead:"Con noi viaggi al prezzo migliore. Puntuali e cordiali in tutto il Basel-Land.",wa:"Prenota ora su WhatsApp",h2:"Dove andiamo?",i1t:"Corse in città",i1d:"Da porta a porta",i2t:"Aeroporto e stazione",i2d:"Puntuali per volo e treno",i3t:"Corse notturne",i3d:"A casa in sicurezza",price:"Prezzo onesto. Nessun giro inutile.",msg:"Buongiorno, vorrei prenotare un taxi."},
+en:{n:"English",lead:"Ride with us for the best price. On time and friendly across Basel-Land.",wa:"Book now on WhatsApp",h2:"Where to?",i1t:"City rides",i1d:"Door to door",i2t:"Airport & station",i2d:"On time for flight and train",i3t:"Night rides",i3d:"Home safe",price:"Fair price. No detours.",msg:"Hello, I would like to book a taxi."},
+ar:{n:"العربية",rtl:1,lead:"معنا تسافر بأفضل سعر. بدقة ولطف في كل أنحاء بازل-لاند.",wa:"احجز الآن عبر واتساب",h2:"إلى أين نذهب؟",i1t:"رحلات المدينة",i1d:"من الباب إلى الباب",i2t:"المطار والمحطة",i2d:"في الوقت المناسب للطائرة والقطار",i3t:"رحلات الليل",i3d:"إلى البيت بأمان",price:"سعر عادل. بدون لفّات.",msg:"مرحبا، أريد حجز سيارة أجرة."},
+tr:{n:"Türkçe",lead:"Bizimle en uygun fiyata gidersiniz. Basel-Land'in her yerinde dakik ve güler yüzlü.",wa:"WhatsApp ile hemen rezervasyon",h2:"Nereye gidiyoruz?",i1t:"Şehir içi yolculuk",i1d:"Kapıdan kapıya",i2t:"Havalimanı ve gar",i2d:"Uçuş ve tren için zamanında",i3t:"Gece yolculukları",i3d:"Eve güvenle",price:"Adil fiyat. Gereksiz dolambaç yok.",msg:"Merhaba, taksi çağırmak istiyorum."},
+fa:{n:"فارسی",rtl:1,lead:"با ما ارزان‌ترین سفر را دارید. دقیق و مهربان در سراسر بازل‌لاند.",wa:"همین حالا در واتس‌اپ رزرو کنید",h2:"کجا برویم؟",i1t:"سفر درون شهری",i1d:"از در تا در",i2t:"فرودگاه و ایستگاه",i2d:"به‌موقع برای پرواز و قطار",i3t:"سفر شبانه",i3d:"امن تا خانه",price:"قیمت منصفانه. بدون مسیر اضافه.",msg:"سلام، می‌خواهم تاکسی رزرو کنم."},
+ckb:{n:"کوردی",rtl:1,lead:"لەگەڵ ئێمە بە هەرزانترین نرخ دەگەیت. لە کاتی خۆیدا و بە ڕووخۆشی لە هەموو Basel-Land.",wa:"ئێستا لە واتس ئاپ حیجز بکە",h2:"بۆ کوێ بچین؟",i1t:"گەشتی ناو شار",i1d:"لە دەرگاوە بۆ دەرگا",i2t:"فڕۆکەخانە و ویستگە",i2d:"لە کاتی خۆیدا بۆ فڕین و شەمەندەفەر",i3t:"گەشتی شەو",i3d:"بە سەلامەتی بۆ ماڵ",price:"نرخی دادپەروەرانە. بێ ڕێگای زیادە.",msg:"سڵاو، دەمەوێت تەکسی حیجز بکەم."}};
+var order=["de","it","en","ar","tr","fa","ckb"],nav=document.getElementById('langs'),cur;
+order.forEach(function(k){var b=document.createElement('button');b.type='button';b.textContent=L[k].n;b.dataset.l=k;b.onclick=function(){set(k)};nav.appendChild(b)});
+function set(k){cur=k;var t=L[k];document.documentElement.lang=k==='ckb'?'ckb':k;document.documentElement.dir=t.rtl?'rtl':'ltr';
+document.querySelectorAll('[data-k]').forEach(function(e){e.textContent=t[e.dataset.k]});
+var u='https://wa.me/41797002001?text='+encodeURIComponent(t.msg);
+document.getElementById('wa').href=u;document.getElementById('fab').href=u;
+nav.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===k)});
+try{localStorage.setItem('lang',k)}catch(e){}}
+var s='';try{s=localStorage.getItem('lang')||''}catch(e){}
+if(!L[s]){var n=(navigator.language||'de').toLowerCase().slice(0,2);s={ku:'ckb',fa:'fa',ar:'ar',tr:'tr',it:'it',en:'en'}[n]||'de'}
+set(s);
+</script>
+</body>
+</html>
